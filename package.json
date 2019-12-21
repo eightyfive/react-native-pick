@@ -23,5 +23,8 @@
   "homepage": "https://github.com/eightyfive/react-native-pick#readme",
   "peerDependencies": {
     "react-native": "*"
+  },
+  "optionalDependencies": {
+    "@react-native-community/datetimepicker": "*"
   }
 }
