@@ -1,0 +1,27 @@
+{
+  "name": "react-native-pick",
+  "version": "0.0.1",
+  "description": "An iOS-only non-customizable (very) simple modal for controls (e.g. Picker)",
+  "main": "index.ios.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eightyfive/react-native-pick.git"
+  },
+  "keywords": [
+    "react-native",
+    "modal",
+    "picker"
+  ],
+  "author": "Benoit Sagols <benoit.sagols@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eightyfive/react-native-pick/issues"
+  },
+  "homepage": "https://github.com/eightyfive/react-native-pick#readme",
+  "peerDependencies": {
+    "react-native": "*"
+  }
+}
