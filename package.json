@@ -1,6 +1,6 @@
 {
   "name": "react-native-pick",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An iOS-only non-customizable (very) simple modal for controls (e.g. Picker)",
   "main": "index.ios.js",
   "scripts": {
