@@ -1,5 +1,5 @@
 import React from 'react';
-export RNDateTimePicker from '@react-native-community/datetimepicker';
+import RNDateTimePicker from '@react-native-community/datetimepicker';
 
 import PickerModalIOS from './picker-modal';
 
