@@ -3,7 +3,7 @@ import { TouchableOpacity, View } from 'react-native';
 import ModalIOS from './modal';
 
 export default function PickerModalIOS({
-  enabled,
+  enabled = true,
   placeholderIOS,
   PickerComponent,
   ...rest
