@@ -5,7 +5,7 @@ import PickerModalIOS from './picker-modal';
 
 export default function Picker({ mode, ...rest }) {
   if (mode === 'dialog') {
-    return <PickerModalIOS {...rest} PickerComponent={RNPicker} />;
+    return <PickerModalIOS {...rest} Component={RNPicker} />;
   }
 
   return <RNPicker {...rest} />;

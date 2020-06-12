@@ -13,15 +13,13 @@ export default function ModalIOS({
   backgroundColor: bg,
   color: text,
   children,
-  dark = false,
   doneText = 'Done',
   onDone,
   ...rest
 }) {
-  const theme = themes[dark ? 'dark' : 'light'];
-
-  const backgroundColor = bg || theme.bg;
-  const color = text || theme.text;
+  // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
+  const backgroundColor = bg || 'rgb(242, 242, 247)'; // systemGray6;
+  const color = text || 'rgb(0, 122, 255)'; // systemBlue
 
   return (
     <Modal
@@ -45,18 +43,6 @@ export default function ModalIOS({
     </Modal>
   );
 }
-
-// https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
-const themes = {
-  light: {
-    bg: 'rgb(242, 242, 247)', // systemGray6
-    text: 'rgb(0, 122, 255)', // systemBlue
-  },
-  dark: {
-    bg: 'rgb(28, 28, 30)', // systemGray6
-    text: 'rgb(10, 132, 255)', // systemBlue
-  },
-};
 
 const styles = StyleSheet.create({
   mask: {
