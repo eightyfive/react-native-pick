@@ -3,6 +3,9 @@ import { TouchableOpacity, View } from 'react-native';
 import ModalIOS from './modal';
 
 export default function PickerModalIOS({
+  backgroundColorIOS: backgroundColor,
+  colorIOS: color,
+  dark = false,
   enabled = true,
   placeholderIOS,
   PickerComponent,
@@ -19,7 +22,7 @@ export default function PickerModalIOS({
         <View pointerEvents="none">{placeholderIOS}</View>
       </TouchableOpacity>
 
-      <ModalIOS {...{ visible, onDone: close }}>
+      <ModalIOS {...{ color, backgroundColor, dark, visible, onDone: close }}>
         <PickerComponent {...{ ...rest, enabled }} />
       </ModalIOS>
     </Fragment>
