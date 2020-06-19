@@ -5,7 +5,7 @@ import PickerModalIOS from './picker-modal';
 
 export default function DateTimePicker({ modal, ...rest }) {
   if (modal === true) {
-    return <PickerModalIOS {...rest} PickerComponent={RNDateTimePicker} />;
+    return <PickerModalIOS {...rest} Component={RNDateTimePicker} />;
   }
 
   return <RNDateTimePicker {...rest} />;
