@@ -1,7 +1,7 @@
-import React from 'react';
-import RNDateTimePicker from '@react-native-community/datetimepicker';
+import React from "react";
+import RNDateTimePicker from "@react-native-community/datetimepicker";
 
-import PickerModalIOS from './picker-modal';
+import PickerModalIOS from "./picker-modal.ios";
 
 export default function DateTimePicker({ modal, ...rest }) {
   if (modal === true) {

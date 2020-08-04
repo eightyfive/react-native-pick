@@ -1,2 +1,1 @@
-export { default } from '@react-native-community/datetimepicker';
-
+export { default } from "@react-native-community/datetimepicker";

@@ -1,6 +1,6 @@
-import React, { Fragment, useState } from 'react';
-import { TouchableOpacity, View } from 'react-native';
-import ModalIOS from './modal';
+import React, { Fragment, useState } from "react";
+import { TouchableOpacity, View } from "react-native";
+import ModalIOS from "./modal.ios";
 
 export default function PickerModalIOS({
   backgroundColor,
@@ -23,7 +23,11 @@ export default function PickerModalIOS({
       </TouchableOpacity>
 
       <ModalIOS {...{ color, backgroundColor, visible, onDone: close }}>
-        {children ? children : <Component {...{ ...rest, children, enabled }} />}
+        {children ? (
+          children
+        ) : (
+          <Component {...{ ...rest, children, enabled }} />
+        )}
       </ModalIOS>
     </Fragment>
   );

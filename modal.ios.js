@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Modal,
   StyleSheet,
@@ -6,20 +6,20 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
-} from 'react-native';
+} from "react-native";
 
 export default function ModalIOS({
-  animationType = 'slide',
+  animationType = "slide",
   backgroundColor: bg,
   color: text,
   children,
-  doneText = 'Done',
+  doneText = "Done",
   onDone,
   ...rest
 }) {
   // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
-  const backgroundColor = bg || 'rgb(242, 242, 247)'; // systemGray6;
-  const color = text || 'rgb(0, 122, 255)'; // systemBlue
+  const backgroundColor = bg || "rgb(242, 242, 247)"; // systemGray6;
+  const color = text || "rgb(0, 122, 255)"; // systemBlue
 
   return (
     <Modal
@@ -46,14 +46,14 @@ export default function ModalIOS({
 
 const styles = StyleSheet.create({
   mask: {
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
   },
   container: {
-    position: 'absolute',
+    position: "absolute",
     bottom: 0,
     left: 0,
     right: 0,
@@ -61,12 +61,12 @@ const styles = StyleSheet.create({
   accessory: {
     height: 44,
     paddingHorizontal: 16,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
   },
   button: {
-    fontWeight: '600',
+    fontWeight: "600",
     fontSize: 17,
   },
 });

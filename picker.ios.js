@@ -1,10 +1,10 @@
-import React from 'react';
-import { Picker as RNPicker } from 'react-native';
+import React from "react";
+import { Picker as RNPicker } from "react-native";
 
-import PickerModalIOS from './picker-modal';
+import PickerModalIOS from "./picker-modal.ios";
 
 export default function Picker({ mode, ...rest }) {
-  if (mode === 'dialog') {
+  if (mode === "dialog") {
     return <PickerModalIOS {...rest} Component={RNPicker} />;
   }
 
