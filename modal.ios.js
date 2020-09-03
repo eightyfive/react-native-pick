@@ -14,7 +14,7 @@ export default function ModalIOS({
   color: text,
   children,
   doneText = "Done",
-  onDone,
+  onDismiss,
   ...rest
 }) {
   // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
@@ -29,12 +29,12 @@ export default function ModalIOS({
         transparent: true,
       }}
     >
-      <TouchableWithoutFeedback onPress={onDone}>
+      <TouchableWithoutFeedback onPress={onDismiss}>
         <View style={styles.mask} />
       </TouchableWithoutFeedback>
       <View style={[styles.container, { backgroundColor }]}>
         <View style={styles.accessory}>
-          <TouchableOpacity onPress={onDone}>
+          <TouchableOpacity onPress={onDismiss}>
             <Text style={[styles.button, { color }]}>{doneText}</Text>
           </TouchableOpacity>
         </View>
