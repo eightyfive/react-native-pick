@@ -13,16 +13,16 @@ export default function PickerModalIOS({
 }) {
   const [visible, setVisible] = useState(false);
 
-  const open = () => setVisible(true);
-  const close = () => setVisible(false);
+  const show = () => setVisible(true);
+  const hide = () => setVisible(false);
 
   return (
     <Fragment>
-      <TouchableOpacity {...{ disabled: !enabled, onPress: open }}>
+      <TouchableOpacity {...{ disabled: !enabled, onPress: show }}>
         <View pointerEvents="none">{placeholderIOS}</View>
       </TouchableOpacity>
 
-      <ModalIOS {...{ color, backgroundColor, visible, onDone: close }}>
+      <ModalIOS {...{ color, backgroundColor, visible, onDismiss: hide }}>
         {children ? (
           children
         ) : (
