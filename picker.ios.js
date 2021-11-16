@@ -1,5 +1,5 @@
 import React from "react";
-import { Picker as RNPicker } from "react-native";
+import { Picker as RNPicker } from "@react-native-picker/picker";
 
 import PickerModalIOS from "./picker-modal.ios";
 
