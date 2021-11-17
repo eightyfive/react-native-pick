@@ -23,11 +23,7 @@ export default function PickerModalIOS({
       </TouchableOpacity>
 
       <ModalIOS {...{ color, backgroundColor, visible, onDismiss: hide }}>
-        {children ? (
-          children
-        ) : (
-          <Component {...{ ...rest, children, enabled }} />
-        )}
+        <Component {...{ ...rest, children, enabled }} />
       </ModalIOS>
     </Fragment>
   );
