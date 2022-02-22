@@ -4,7 +4,7 @@
   "description": "An iOS-only non-customizable (very) simple modal for controls (e.g. Picker)",
   "main": "index.js",
   "scripts": {
-    "release": "np --no-2fa --no-draft-release"
+    "test": "cd ."
   },
   "repository": {
     "type": "git",
