@@ -1,6 +1,5 @@
 {
   "compileOnSave": true,
-  "declaration": true,
   "compilerOptions": {
     "jsx": "react",
     "target": "es2018",
