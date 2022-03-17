@@ -1,5 +1,6 @@
 {
   "compileOnSave": true,
+  "declaration": true,
   "compilerOptions": {
     "jsx": "react",
     "target": "es2018",
@@ -9,6 +10,7 @@
     "declaration": true,
     "outDir": "./dist",
     "resolveJsonModule": true,
-    "rootDir": "."
+    "rootDir": "./src",
+    "skipLibCheck": true
   }
 }

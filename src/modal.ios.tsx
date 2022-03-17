@@ -1,6 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   Modal,
+  ModalProps,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -8,43 +9,42 @@ import {
   View,
 } from "react-native";
 
-export default function ModalIOS({
-  animationType = "slide",
-  backgroundColor: bg,
-  color: text,
+export type ModalIOSProps = ModalProps & {
+  backgroundColor?: string;
+  color?: string;
+  doneText?: string;
+  onDismiss: () => void;
+};
+
+const ModalIOS: FC<ModalIOSProps> = ({
+  // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
+  backgroundColor = "rgb(242, 242, 247)", // systemGray6
+  color = "rgb(0, 122, 255)", // systemBlue
   children,
   doneText = "Done",
   onDismiss,
   ...rest
-}) {
-  // https://developer.apple.com/design/human-interface-guidelines/ios/visual-design/color/
-  const backgroundColor = bg || "rgb(242, 242, 247)"; // systemGray6;
-  const color = text || "rgb(0, 122, 255)"; // systemBlue
-
+}) => {
   return (
-    <Modal
-      {...{
-        ...rest,
-        animationType,
-        transparent: true,
-      }}
-    >
+    <Modal {...rest} transparent animationType={rest.animationType || "slide"}>
       <TouchableWithoutFeedback onPress={onDismiss}>
-        <View style={styles.mask} />
+        <View style={$.mask} />
       </TouchableWithoutFeedback>
-      <View style={[styles.container, { backgroundColor }]}>
-        <View style={styles.accessory}>
+      <View style={[$.container, { backgroundColor }]}>
+        <View style={$.accessory}>
           <TouchableOpacity onPress={onDismiss}>
-            <Text style={[styles.button, { color }]}>{doneText}</Text>
+            <Text style={[$.button, { color }]}>{doneText}</Text>
           </TouchableOpacity>
         </View>
         {children}
       </View>
     </Modal>
   );
-}
+};
 
-const styles = StyleSheet.create({
+export default ModalIOS;
+
+const $ = StyleSheet.create({
   mask: {
     position: "absolute",
     top: 0,

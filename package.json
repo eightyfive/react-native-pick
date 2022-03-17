@@ -1,9 +1,11 @@
 {
   "name": "react-native-pick",
   "version": "0.2.2",
-  "description": "An iOS-only non-customizable (very) simple modal for controls (e.g. Picker)",
-  "main": "index.js",
+  "description": "Minimalistic, unified React Native Picker",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rm -r dist/* && tsc",
     "test": "cd ."
   },
   "repository": {
@@ -15,9 +17,6 @@
     "modal",
     "picker"
   ],
-  "files": [
-    "dist/*"
-  ],
   "author": "Benoit Sagols <benoit.sagols@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -25,13 +24,19 @@
   },
   "homepage": "https://github.com/eightyfive/react-native-pick#readme",
   "peerDependencies": {
+    "@react-native-community/datetimepicker": "*",
     "@react-native-picker/picker": "*",
     "react-native": "*"
   },
-  "optionalDependencies": {
-    "@react-native-community/datetimepicker": "*"
-  },
   "devDependencies": {
+    "@react-native-community/datetimepicker": "^6.0.1",
+    "@react-native-picker/picker": "^2.4.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.40",
+    "@types/react-native": "^0.67.3",
+    "@types/react-test-renderer": "^17.0.1",
+    "prettier": "^2.6.0",
+    "react-native": "^0.67.3",
     "typescript": "^4.6.2"
   }
 }
