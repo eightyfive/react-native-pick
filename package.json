@@ -15,6 +15,9 @@
     "modal",
     "picker"
   ],
+  "files": [
+    "dist/*"
+  ],
   "author": "Benoit Sagols <benoit.sagols@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -22,10 +25,13 @@
   },
   "homepage": "https://github.com/eightyfive/react-native-pick#readme",
   "peerDependencies": {
-    "react-native": "*",
-    "@react-native-picker/picker": "*"
+    "@react-native-picker/picker": "*",
+    "react-native": "*"
   },
   "optionalDependencies": {
     "@react-native-community/datetimepicker": "*"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.2"
   }
 }
