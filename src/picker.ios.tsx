@@ -1,13 +1,12 @@
 import React, { FC, ComponentType } from "react";
 import {
   Picker as RNPicker,
-  PickerProps,
   PickerItemProps,
 } from "@react-native-picker/picker";
 
 import PickerModalIOS, { PickerModalIOSProps } from "./picker-modal.ios";
 
-type Props = PickerProps & Omit<PickerModalIOSProps, "Component">;
+type Props = Omit<PickerModalIOSProps, "Component">;
 
 type PickerType = FC<Props> & {
   Item: ComponentType<PickerItemProps>;
