@@ -2,10 +2,9 @@ import React, { FC } from "react";
 import {
   Modal,
   ModalProps,
+  Pressable,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
   View,
 } from "react-native";
 
@@ -27,14 +26,14 @@ const ModalIOS: FC<ModalIOSProps> = ({
 }) => {
   return (
     <Modal {...rest} transparent animationType={rest.animationType || "slide"}>
-      <TouchableWithoutFeedback onPress={onDismiss}>
+      <Pressable onPress={onDismiss}>
         <View style={$.mask} />
-      </TouchableWithoutFeedback>
+      </Pressable>
       <View style={[$.container, { backgroundColor }]}>
         <View style={$.accessory}>
-          <TouchableOpacity onPress={onDismiss}>
+          <Pressable onPress={onDismiss}>
             <Text style={[$.button, { color }]}>{doneText}</Text>
-          </TouchableOpacity>
+          </Pressable>
         </View>
         {children}
       </View>
