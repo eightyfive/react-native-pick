@@ -1,6 +1,6 @@
 {
   "name": "react-native-pick",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Minimalistic, unified React Native Picker",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
