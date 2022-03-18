@@ -13,7 +13,7 @@ export type ModalIOSProps = ModalProps & {
   backgroundColor?: string;
   color?: string;
   doneText?: string;
-  onDismiss: () => void;
+  onDismiss?: () => void;
 };
 
 const ModalIOS: FC<ModalIOSProps> = ({
@@ -22,7 +22,7 @@ const ModalIOS: FC<ModalIOSProps> = ({
   color = "rgb(0, 122, 255)", // systemBlue
   children,
   doneText = "Done",
-  onDismiss,
+  onDismiss = () => {},
   ...rest
 }) => {
   return (
