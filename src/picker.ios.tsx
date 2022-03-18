@@ -7,7 +7,7 @@ import {
 
 import PickerModalIOS, { PickerModalIOSProps } from "./picker-modal.ios";
 
-type Props = PickerProps & PickerModalIOSProps;
+type Props = PickerProps & Omit<PickerModalIOSProps, "Component">;
 
 type PickerType = FC<Props> & {
   Item: ComponentType<PickerItemProps>;
